@@ -1,0 +1,104 @@
+
+  body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+  } 
+#videoBackground {
+    position: fixed;   /* permanece fijo mientras haces scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ajusta al tamaño de pantalla sin deformar */
+    z-index: -1;       /* queda detrás de todo el contenido */
+  }
+  .container {
+    /* para que el fondo sea transparente  */
+ 
+     width: 100%;
+     max-width: var(--max-width);
+     background: rgba(7, 7, 7, 0.39); /* capa blanca transparente */
+     border-radius: var(--radius);
+     padding: 20px;
+   }
+   
+   header {
+    /* background: #070707; */
+    background: #fefeff;
+    border-radius: 10px;
+    color: rgb(28, 15, 102);
+    text-align: center;
+    padding: 20px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative; */
+  }
+  .logo {
+    width: 300px;
+    height: 150px;
+  }
+  
+  nav a {
+    color: rgb(10, 12, 121);
+    margin: 15px;
+    text-decoration: none;
+    
+    font-weight: bold;
+  }
+  p{
+    font-size: 18px;
+    color: #101011;
+  }
+  /* PERFIL */
+  .perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .perfil img {
+    width: 234px;
+    border-radius: 50%;
+    margin: 100px;
+  }
+  
+  /* TARJETAS */
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background:  #fdfdfd;
+    color: rgb(24, 8, 97);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .perfil {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
